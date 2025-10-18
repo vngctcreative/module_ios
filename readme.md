@@ -1,3 +1,1 @@
-# Module IOS 1.0
-
-Full module ios
+# Module Shadowrocket IOS 1.0
