@@ -1,0 +1,15 @@
+#!url=https://whatshub.top/module/wink.module
+
+#!name=Wink-VN-Creative
+
+#!desc=Wink pro
+
+#!author=Creative
+
+#!version=1.0.0
+
+[Script]
+WinkForeverVipCrack.js=type=http-response,pattern=^https?:\/\/api-sub\.meitu\.com\/v2\/user\/vip_info_by_group\.json,requires-body=1,script-path=https://raw.githubusercontent.com/vngctcreative/module_ios/main/java/wink.js
+
+[MITM]
+hostname = %APPEND% api-sub.meitu.com
