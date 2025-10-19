@@ -27,9 +27,13 @@ VSCO1 = type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/v\d\/subscr
 Vivacut = type=http-response,pattern=^https:\/\/medi\.dxzzy321\.top\/api\/rest\/commerce\/integrate\/vip\/perform,requires-body=1,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/vivacut.js
 #Pixelcut
 Pixelcut = type=http-response,pattern=https://api.revenuecat.com/v1/(receipts|subscribers)/*,requires-body=1,script-path=https://raw.githubusercontent.com/Marol62926/MarScrpt/main/pixelcut.js
+#Photoroom
+PhotoRoom = type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$),requires-body=1,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/PhotoRoom.js
+#PhotoshopExpress
+PhotoshopExpress = type=http-response,pattern=^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile,requires-body=1,script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/photoshop.js
 
 [MITM]
-#Locket, VSCO, Pixelcut
+#Locket, VSCO, Pixelcut, PhotoRoom
 hostname = %APPEND% api.revenuecat.com
 #Picsart
 hostname = %APPEND% api.picsart.c*, api.meiease.c*
@@ -45,6 +49,8 @@ hostname = %APPEND% premium*.truecaller.com
 hostname = %APPEND% api-sub.meitu.com
 #Vivacut
 hostname = %APPEND% medi.dxzzy321.top
+#PhotoshopExpress
+hostname = %APPEND% lcs-mobile-cops.adobe.io
 
 [Rule]
 AND,((DOMAIN-SUFFIX,googlevideo.com), (PROTOCOL,UDP)),REJECT
