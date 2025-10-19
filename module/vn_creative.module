@@ -39,10 +39,11 @@ ro x = type=http-response,pattern=api.rofilm.net||rophimapi.net,requires-body=1,
 foodie = type=http-response,pattern=^https:\/\/purchase-foodiecn-api\.yiruikecorp\.com\/v1\/purchase\/subscription\/subscriber\/status,requires-body=1,script-path=https://raw.githubusercontent.com/vngctcreative/module_ios/main/java/foodie.js
 #alightmotion
 alightmotion = type=http-response https://us-central1-alight-creative.cloudfunctions.net/getAccountStatusAndLicenses script-path=https://raw.githubusercontent.com/vngctcreative/module_ios/main/java/alightmotion.js, requires-body=true, timeout=5, tag=Alight Motion
-
+#b612
+B612 = type=http-response,pattern=https://user-kaji-api.b612kaji.com/v1/purchase/subscription/subscriber/status,requires-body=1,script-path=https://raw.githubusercontent.com/vngctcreative/module_ios/main/java/b612.js
 
 [MITM]
-#Locket, VSCO, Pixelcut, PhotoRoom
+#Locket, VSCO, Pixelcut, PhotoRoom, Alightmotion
 hostname = %APPEND% api.revenuecat.com
 #Picsart
 hostname = %APPEND% api.picsart.c*, api.meiease.c*
@@ -67,7 +68,9 @@ hostname = api.rofilm.net, rophimapi.net
 #Foodie
 hostname = %APPEND% purchase-foodiecn-api.yiruikecorp.com
 #Alightmotion
-hostname = api.revenuecat.com, buy.itunes.apple.com, us-central1-alight-creative.cloudfunctions.net
+hostname = buy.itunes.apple.com, us-central1-alight-creative.cloudfunctions.net
+#B612
+hostname = %APPEND% user-kaji-api.b612kaji.com
 
 [General]
 bypass-system = true
