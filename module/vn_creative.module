@@ -21,8 +21,8 @@ Truecaller = type=http-response,pattern=^https://premium-(.+)\.truecaller\.com/v
 #Wink
 Wink = type=http-response,pattern=^https?:\/\/api-sub\.meitu\.com\/v2\/user\/vip_info_by_group\.json,requires-body=1,script-path=https://raw.githubusercontent.com/vngctcreative/module_ios/main/java/wink.js
 #VSCO
-VSCO = type=http-request,pattern=^https?:\/\/api\.revenuecat\.com\/v\d\/subscribers\/,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/vsco.js
-VSCO1 = type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/v\d\/subscribers\/,requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/vsco.js
+VSCO = type=http-request,pattern=^https?:\/\/api\.revenuecat\.com\/v\d\/subscribers\/,script-path=https://raw.githubusercontent.com/vngctcreative/module_ios/main/java/vsco.js
+VSCO1 = type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/v\d\/subscribers\/,requires-body=1,script-path=https://raw.githubusercontent.com/vngctcreative/module_ios/main/java/vsco.js
 #Viva cut
 Vivacut = type=http-response,pattern=^https:\/\/medi\.dxzzy321\.top\/api\/rest\/commerce\/integrate\/vip\/perform,requires-body=1,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/vivacut.js
 #Pixelcut
