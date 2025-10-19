@@ -35,6 +35,8 @@ PhotoshopExpress = type=http-response,pattern=^https:\/\/lcs-mobile-cops\.adobe\
 LightRoom = type=http-response,pattern=^https:\/\/photos\.adobe\.io\/v2\/accounts*,requires-body=1,script-path=https://raw.githubusercontent.com/vngctcreative/module_ios/main/java/lightroom.js
 #rophim
 ro x = type=http-response,pattern=api.rofilm.net||rophimapi.net,requires-body=1,max-size=0,binary-body-mode=0,debug=1,script-path=https://raw.githubusercontent.com/vngctcreative/module_ios/main/java/rox.js
+#foodie
+foodie = type=http-response,pattern=^https:\/\/purchase-foodiecn-api\.yiruikecorp\.com\/v1\/purchase\/subscription\/subscriber\/status,requires-body=1,script-path=https://raw.githubusercontent.com/vngctcreative/module_ios/main/java/foodie.js
 
 [MITM]
 #Locket, VSCO, Pixelcut, PhotoRoom
@@ -59,6 +61,8 @@ hostname = %APPEND% lcs-mobile-cops.adobe.io
 hostname = %APPEND% photos.adobe.io
 #Rophim
 hostname = api.rofilm.net, rophimapi.net
+#Foodie
+hostname = %APPEND% purchase-foodiecn-api.yiruikecorp.com
 
 [Rule]
 AND,((DOMAIN-SUFFIX,googlevideo.com), (PROTOCOL,UDP)),REJECT
