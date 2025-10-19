@@ -2,7 +2,7 @@
 #!name=ALL IN ONE MODULE
 #!desc=VIP PRO
 #!author=Creative
-#!version=1.0.0
+#!version=1.0.6
 
 [Script]
 #Locket
@@ -24,15 +24,15 @@ Wink = type=http-response,pattern=^https?:\/\/api-sub\.meitu\.com\/v2\/user\/vip
 VSCO = type=http-request,pattern=^https?:\/\/api\.revenuecat\.com\/v\d\/subscribers\/,script-path=https://raw.githubusercontent.com/vngctcreative/module_ios/main/java/vsco.js
 VSCO1 = type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/v\d\/subscribers\/,requires-body=1,script-path=https://raw.githubusercontent.com/vngctcreative/module_ios/main/java/vsco.js
 #Viva cut
-Vivacut = type=http-response,pattern=^https:\/\/medi\.dxzzy321\.top\/api\/rest\/commerce\/integrate\/vip\/perform,requires-body=1,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/vivacut.js
+Vivacut = type=http-response,pattern=^https:\/\/medi\.dxzzy321\.top\/api\/rest\/commerce\/integrate\/vip\/perform,requires-body=1,script-path=https://raw.githubusercontent.com/vngctcreative/module_ios/main/java/vivacut.js
 #Pixelcut
-Pixelcut = type=http-response,pattern=https://api.revenuecat.com/v1/(receipts|subscribers)/*,requires-body=1,script-path=https://raw.githubusercontent.com/Marol62926/MarScrpt/main/pixelcut.js
+Pixelcut = type=http-response,pattern=https://api.revenuecat.com/v1/(receipts|subscribers)/*,requires-body=1,script-path=https://raw.githubusercontent.com/vngctcreative/module_ios/main/java/pixelcut.js
 #Photoroom
-PhotoRoom = type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$),requires-body=1,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/PhotoRoom.js
+PhotoRoom = type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$),requires-body=1,script-path=https://raw.githubusercontent.com/vngctcreative/module_ios/main/java/photoroom.js
 #PhotoshopExpress
-PhotoshopExpress = type=http-response,pattern=^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile,requires-body=1,script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/photoshop.js
+PhotoshopExpress = type=http-response,pattern=^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile,requires-body=1,script-path=https://raw.githubusercontent.com/vngctcreative/module_ios/main/java/photoshop.js
 #LightRoom
-LightRoom = type=http-response,pattern=^https:\/\/photos\.adobe\.io\/v2\/accounts*,requires-body=1,script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/lightroom.js
+LightRoom = type=http-response,pattern=^https:\/\/photos\.adobe\.io\/v2\/accounts*,requires-body=1,script-path=https://raw.githubusercontent.com/vngctcreative/module_ios/main/java/lightroom.js
 
 [MITM]
 #Locket, VSCO, Pixelcut, PhotoRoom
