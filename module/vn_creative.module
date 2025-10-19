@@ -31,6 +31,8 @@ Pixelcut = type=http-response,pattern=https://api.revenuecat.com/v1/(receipts|su
 PhotoRoom = type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$),requires-body=1,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/PhotoRoom.js
 #PhotoshopExpress
 PhotoshopExpress = type=http-response,pattern=^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile,requires-body=1,script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/photoshop.js
+#LightRoom
+LightRoom = type=http-response,pattern=^https:\/\/photos\.adobe\.io\/v2\/accounts*,requires-body=1,script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/lightroom.js
 
 [MITM]
 #Locket, VSCO, Pixelcut, PhotoRoom
@@ -51,6 +53,8 @@ hostname = %APPEND% api-sub.meitu.com
 hostname = %APPEND% medi.dxzzy321.top
 #PhotoshopExpress
 hostname = %APPEND% lcs-mobile-cops.adobe.io
+#LightRoom
+hostname = %APPEND% photos.adobe.io
 
 [Rule]
 AND,((DOMAIN-SUFFIX,googlevideo.com), (PROTOCOL,UDP)),REJECT
