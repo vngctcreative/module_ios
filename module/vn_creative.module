@@ -67,11 +67,11 @@ hostname = %APPEND% lcs-mobile-cops.adobe.io
 #LightRoom
 hostname = %APPEND% photos.adobe.io
 #Rophim
-hostname = api.rofilm.net, rophimapi.net
+hostname = %APPEND% api.rofilm.net, rophimapi.net
 #Foodie
 hostname = %APPEND% purchase-foodiecn-api.yiruikecorp.com
 #Alightmotion
-hostname = buy.itunes.apple.com, us-central1-alight-creative.cloudfunctions.net
+hostname = %APPEND% buy.itunes.apple.com, us-central1-alight-creative.cloudfunctions.net
 #B612
 hostname = %APPEND% user-kaji-api.b612kaji.com
 #Nicegram
