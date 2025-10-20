@@ -4,75 +4,6 @@
 #!author=Creative
 #!version=1.1.1
 
-[Script]
-#Locket
-revenuecat = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$), script-path=https://raw.githubusercontent.com/vngctcreative/module_ios/main/java/locket.js, requires-body=true, max-size=-1, timeout=60
-deleteHeader = type=http-request, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers), script-path=https://raw.githubusercontent.com/vngctcreative/module_ios/main/java/deleteheader.js, timeout=60
-#Picsart
-Picsart = type=http-response,pattern=https:\/\/api\.(picsart|meiease)\.c(n|om)\/users\/show\/me\.json,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/vngctcreative/module_ios/main/java/picsart.js
-#SoundCloud
-SoundCloud = type=http-response,pattern=https://api-mobile.soundcloud.com/configuration/ios,requires-body=1,script-path=https://raw.githubusercontent.com/vngctcreative/module_ios/main/java/soundcloud.js
-#Spotify
-Spotify = type=http-response,pattern=^https:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/vngctcreative/module_ios/main/java/spotify.js,argument=appid=此处填入APPID&securityKey=此处填入密钥
-#Youtube
-Youtube = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch),requires-body=1,max-size=-1,binary-body-mode=1,engine={{{脚本执行引擎}}},script-path=https://raw.githubusercontent.com/vngctcreative/module_ios/main/java/youtube.js,argument="{"lyricLang":"{{{歌词翻译语言}}}","captionLang":"{{{字幕翻译语言}}}","blockUpload":{{{屏蔽上传按钮}}},"blockImmersive":{{{屏蔽选段按钮}}},"debug":{{{启用调试模式}}}}"
-#Truecaller
-Truecaller = type=http-response,pattern=^https://premium-(.+)\.truecaller\.com/v\d/(subscriptions|products/apple),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/vngctcreative/module_ios/main/java/truecaller.js
-#Wink
-Wink = type=http-response,pattern=^https?:\/\/api-sub\.meitu\.com\/v2\/user\/vip_info_by_group\.json,requires-body=1,script-path=https://raw.githubusercontent.com/vngctcreative/module_ios/main/java/wink.js
-#VSCO
-VSCO = type=http-request,pattern=^https?:\/\/api\.revenuecat\.com\/v\d\/subscribers\/,script-path=https://raw.githubusercontent.com/vngctcreative/module_ios/main/java/vsco.js
-VSCO1 = type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/v\d\/subscribers\/,requires-body=1,script-path=https://raw.githubusercontent.com/vngctcreative/module_ios/main/java/vsco.js
-#Viva cut
-Vivacut = type=http-response,pattern=^https:\/\/medi\.dxzzy321\.top\/api\/rest\/commerce\/integrate\/vip\/perform,requires-body=1,script-path=https://raw.githubusercontent.com/vngctcreative/module_ios/main/java/vivacut.js
-#Pixelcut
-Pixelcut = type=http-response,pattern=https://api.revenuecat.com/v1/(receipts|subscribers)/*,requires-body=1,script-path=https://raw.githubusercontent.com/vngctcreative/module_ios/main/java/pixelcut.js
-#Photoroom
-PhotoRoom = type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$),requires-body=1,script-path=https://raw.githubusercontent.com/vngctcreative/module_ios/main/java/photoroom.js
-#PhotoshopExpress
-PhotoshopExpress = type=http-response,pattern=^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile,requires-body=1,script-path=https://raw.githubusercontent.com/vngctcreative/module_ios/main/java/photoshop.js
-#LightRoom
-LightRoom = type=http-response,pattern=^https:\/\/photos\.adobe\.io\/v2\/accounts*,requires-body=1,script-path=https://raw.githubusercontent.com/vngctcreative/module_ios/main/java/lightroom.js
-#rophim
-ro x = type=http-response,pattern=api.rofilm.net||rophimapi.net,requires-body=1,max-size=0,binary-body-mode=0,debug=1,script-path=https://raw.githubusercontent.com/vngctcreative/module_ios/main/java/rox.js
-#foodie
-foodie = type=http-response,pattern=^https:\/\/purchase-foodiecn-api\.yiruikecorp\.com\/v1\/purchase\/subscription\/subscriber\/status,requires-body=1,script-path=https://raw.githubusercontent.com/vngctcreative/module_ios/main/java/foodie.js
-#b612
-B612 = type=http-response,pattern=https://user-kaji-api.b612kaji.com/v1/purchase/subscription/subscriber/status,requires-body=1,script-path=https://raw.githubusercontent.com/vngctcreative/module_ios/main/java/b612.js
-#nicegram
-Nicegram = type=http-request,pattern=^https?:\/\/restore-access\.indream\.app\/restoreAccess\?id=\w+$,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/vngctcreative/module_ios/main/java/nicegram.js,script-update-interval=0
-
-
-[MITM]
-#Locket, VSCO, Pixelcut, PhotoRoom, Alightmotion
-hostname = %APPEND% api.revenuecat.com
-#Picsart
-hostname = %APPEND% api.picsart.c*, api.meiease.c*
-#SoundCloud
-hostname= %APPEND% api-mobile.soundcloud.com
-#Spotify
-hostname = %APPEND% spclient.wg.spotify.com
-#Youtube
-hostname = %APPEND% -redirector*.googlevideo.com,*.googlevideo.com,www.youtube.com,s.youtube.com,youtubei.googleapis.com
-#Truecaller
-hostname = %APPEND% premium*.truecaller.com
-#Wink
-hostname = %APPEND% api-sub.meitu.com
-#Vivacut
-hostname = %APPEND% medi.dxzzy321.top
-#PhotoshopExpress
-hostname = %APPEND% lcs-mobile-cops.adobe.io
-#LightRoom
-hostname = %APPEND% photos.adobe.io
-#Rophim
-hostname = %APPEND% api.rofilm.net, rophimapi.net
-#Foodie
-hostname = %APPEND% purchase-foodiecn-api.yiruikecorp.com
-#B612
-hostname = %APPEND% user-kaji-api.b612kaji.com
-#Nicegram
-hostname= %APPEND% restore-access.indream.app
-
 [Rule]
 AND,((DOMAIN-SUFFIX,googlevideo.com), (PROTOCOL,UDP)),REJECT
 AND,((DOMAIN,youtubei.googleapis.com), (PROTOCOL,UDP)),REJECT
@@ -83,3 +14,9 @@ AND,((DOMAIN,youtubei.googleapis.com), (PROTOCOL,UDP)),REJECT
 ^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads _ reject-200
 ^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) _ reject-200
 ^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext _ reject-200
+
+[Script]
+youtube.response = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch),requires-body=1,max-size=-1,binary-body-mode=1,engine={{{脚本执行引擎}}},script-path=https://raw.githubusercontent.com/vngctcreative/module_ios/main/java/youtube.js,argument="{"lyricLang":"{{{歌词翻译语言}}}","captionLang":"{{{字幕翻译语言}}}","blockUpload":{{{屏蔽上传按钮}}},"blockImmersive":{{{屏蔽选段按钮}}},"debug":{{{启用调试模式}}}}"
+
+[MITM]
+hostname = %APPEND% -redirector*.googlevideo.com,*.googlevideo.com,www.youtube.com,s.youtube.com,youtubei.googleapis.com
